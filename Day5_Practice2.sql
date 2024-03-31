@@ -5,6 +5,11 @@ where ID%2 =0
 -- EXERCISE 2
 select count(city) - count(distinct city) from station
 
+-- EXERCISE 3
+select 
+ceiling (avg (salary) - avg (replace(salary,'0','')))
+from employees
+
 -- EXERCISE 4
 SELECT
 round(cast(sum(item_count*order_occurrences)/sum(order_occurrences) as decimal), 1) as mean
